@@ -1,0 +1,16 @@
+package edu.ssafy.chap05.two;
+
+public class Ironman extends Hero {
+	
+	
+	@Override
+	public void superPower() {
+		// TODO Auto-generated method stub
+		System.out.println("아이언맨 슈퍼파워");
+	}
+	
+	public void Smart()
+	{
+		
+	}
+}

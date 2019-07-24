@@ -1,0 +1,6 @@
+package ssafy_chap05_190723;
+
+public class Customer {
+	String name;
+	int age;
+}

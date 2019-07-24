@@ -1,0 +1,11 @@
+//중간값찾기 (카운팅 정렬 해보기)
+package Algorithm_2WEEK;
+
+public class midnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

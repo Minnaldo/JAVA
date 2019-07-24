@@ -1,0 +1,15 @@
+package Algorithm_1WEEK_D1;
+
+public class Bubblesort_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = { 7, 5, 6, 3, 4, 1, 2};
+		
+		System.out.print("버블정렬 전 : ");
+		
+		for()
+		System.out.println(Arrays.toSort(arr));
+	}
+
+}

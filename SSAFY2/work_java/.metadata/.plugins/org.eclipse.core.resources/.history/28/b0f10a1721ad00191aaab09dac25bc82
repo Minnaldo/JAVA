@@ -1,0 +1,25 @@
+package ssafy_chap05_190723;
+
+/* static이 붙을 수 있는 위치
+ * : 멤버변수, 멤버함수, 내부클래스, 
+ */
+public class StaticTest {
+	int i;
+	static int si;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StaticTest st = new StaticTest();
+		st.i = 7;
+		
+		StaticTest st2 = new StaticTest();
+		st2.i = 20;
+		
+		
+		//static 멤버라 객체생성을 하지 않고도, 접근 가능!!!
+		StaticTest.si = 100;
+		
+		
+	}
+
+}

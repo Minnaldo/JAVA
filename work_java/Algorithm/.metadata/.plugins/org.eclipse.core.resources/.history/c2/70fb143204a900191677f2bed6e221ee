@@ -1,0 +1,23 @@
+package Algorithm_1WEEK_D1;
+
+import java.util.Scanner;
+
+public class Gravity_190718 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int[][] map = new int[12][12];
+		int box_num = sc.nextInt();
+		
+		
+		for(int i = 0; i < box_num; i++)
+		{
+			int input = sc.nextInt();
+		}
+		
+		
+		
+	}
+
+}

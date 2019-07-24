@@ -1,0 +1,10 @@
+//SWEA_D2_1945. 소인수분해
+package SWEA_D2;
+
+import java.util.Scanner;
+
+public class SWEA_D2_1945 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in)
+	}
+}

@@ -1,0 +1,49 @@
+package Algorithm_1WEEK_D1;
+
+import java.util.Scanner;
+
+public class Gravity_190718 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int[][] map = new int[12][12];
+		
+		//각 열에 쌓인 블록의 수
+		int[] input = {7, 4, 2, 0, 0, 6, 0, 7, 0 , 0};
+		
+		//보니까 0번열은 7개가 쌓여있음.
+		//0번열에는, 맨 아래칸부터 7개의 칸을 1로 바꿔준다.
+		//맨 아래칸은 map[9][0]
+		map[9][0] = 1;
+		map[8][0] = 1;
+		map[7][0] = 1;
+		map[6][0] = 1;
+		map[5][0] = 1;
+		map[4][0] = 1;
+		map[3][0] = 1;
+		
+//		for(int i = 0; i < map.length; i++)
+//		{
+//			for (int j = 0; j < map.length; j++)
+//			{
+//				
+//			}
+//		}
+		
+		//각 행을 순회하며
+		for(int i = 0; i < map.length; i++)
+		{
+			for(int j = 0; j < map.length; j++)
+			{
+//				int input = sc.nextInt();
+				System.out.print(map[i][j]);
+			}
+			
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package Algirhtm_Homework;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SWEA_D1_2063 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();		//input
+		int[] arr = new int[input];		//점수를 담을 배열
+		
+		//배열에 점수를 담는다.
+		for (int tc = 0; tc < input; tc++)
+		{
+			arr[tc] = sc.nextInt();
+			
+		}
+		
+		//오름차순 배열 정렬.
+		Arrays.sort(arr);
+				
+		System.out.print(arr[input / 2]);	
+	}
+}

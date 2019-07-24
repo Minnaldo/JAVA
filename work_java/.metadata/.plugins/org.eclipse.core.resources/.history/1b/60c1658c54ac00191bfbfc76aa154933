@@ -1,0 +1,28 @@
+package com.ssafy.Book;
+
+public class Book {
+	private String isbn;
+	private String title;
+	private String author;
+	private String publisher;
+	private int price;
+	private String desc;
+	
+	
+	Book() {}
+	
+	Book(String isbn, String title, String author, String publisher, int price, String desc)
+	{
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.price = price;
+		this.desc = desc;
+	}
+	
+	String toString()
+	{
+		
+	}
+}

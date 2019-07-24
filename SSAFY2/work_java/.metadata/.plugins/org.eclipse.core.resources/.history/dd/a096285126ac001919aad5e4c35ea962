@@ -1,0 +1,11 @@
+package ssafy_chap03_190722;
+inport Person.java;
+
+public class PersonMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

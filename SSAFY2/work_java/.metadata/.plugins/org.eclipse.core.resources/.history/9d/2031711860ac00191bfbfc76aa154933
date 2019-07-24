@@ -1,0 +1,10 @@
+package ssafy_HW;
+
+public class TV {
+	private String product_num;
+	private String product_name;
+	private int	price;
+	private int num;
+	private int inch;
+	private int display_type;
+}

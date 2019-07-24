@@ -1,0 +1,17 @@
+package day01;
+
+public class ArrTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//[][][][][][]
+		int[] arr = new int[6];
+		
+		//[][][] [][][]
+		int[][] arr2 = new int[2][3];
+		
+		
+		
+	}
+
+}

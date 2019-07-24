@@ -1,0 +1,26 @@
+package edu.ssafy.chap05.two;
+
+public class HeroManager {
+	private Hero[] heros;
+	private int max = 10;
+	private int index = 0;
+	
+	public HeroManager()
+	{
+		heros = new Hero[max];
+	}
+	
+	
+	public void addHero(Hero h)
+	{
+		if(index < max)
+		{
+			heros[index] = h;
+			index++;
+		}
+		else
+		{
+			heros = new Hero[max * 2];
+		}
+	}
+}

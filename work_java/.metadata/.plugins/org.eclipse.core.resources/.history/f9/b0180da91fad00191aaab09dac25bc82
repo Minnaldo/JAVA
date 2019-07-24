@@ -1,0 +1,11 @@
+package ssafy_HW_chapr05_190723;
+
+public class Book {
+	private String isbn;
+	private String title;
+	private String author;
+	private String publisher;
+	private int price;
+	private String desc;
+}
+

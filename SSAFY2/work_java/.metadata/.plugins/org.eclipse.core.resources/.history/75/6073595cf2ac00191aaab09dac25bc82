@@ -1,0 +1,16 @@
+package ssafy_chap05_190723;
+
+public class Father {
+	String name;
+	public Father(String name)
+	{
+		this.name = name;
+	}
+	
+	//기본 생성자를 생성해야, Son에서 에러가 나지 않는다.
+	//
+	public Father()
+	{
+		
+	}
+}

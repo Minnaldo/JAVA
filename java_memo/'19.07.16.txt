@@ -1,0 +1,25 @@
+* 모든 실행코드는 함수 안
+* 메소드는 함수 안
+* 메모리 구조적으로 -> 스택영역
+* 실행은 스택영역에서
+* 자바에서 첫번째 프레임 : main
+* 메인 함수에서 다른 함수들을 호출해서 스택 프레임 쌓임.
+  스택이 쌓임에 따라 차근차근 실행.
+* 메인 함수 시작과 함께 실행되었다가
+  메인 함수 끝남과 동시에 종료.
+* 스택 : FILO / 큐 : FIFO
+
+* 지역변수는 같은 프레임 안에서만.
+
+* User Define Data Type
+ -배열(Array)
+   int[ ]  :  int형 데이터 타입
+C언어 : call by value , call by reference
+JAVA : 이미 call by value, call by reference 가 결정되어 있음.
+
+*JAVA에서 배열 사용법*
+int[ ] arr = new int[개수]
+int[ ] arr = new int[3];  :  int형 데이터 타입 3개가 들어갈 수 있는 공간을 확보.
+		 [int형 데이터가 3개 만들어진 건 아니다.]
+arr[0] =1 , arr[1] = 2, arr[2] = 3  넣을 수 있다.
+

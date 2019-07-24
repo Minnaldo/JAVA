@@ -1,0 +1,12 @@
+package edu.ssafy.chap05.two;
+
+public class HeroMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Hero[] h = new Hero[3];
+		h[0]=  new Hulk();
+		h[1] = new Spiderman()
+	}
+
+}

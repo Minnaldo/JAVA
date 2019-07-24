@@ -1,0 +1,38 @@
+package ssafy_chap04_190722;
+
+public class Date {
+	private int year;
+	private int month;
+	private int day;
+	
+	/*데이터에는 private , 기능에는 public 
+	 */
+	
+	public void setYear(int year)
+	{
+		if(year >= 2100 || year < 1900)
+		{
+			System.out.println("입력하신 년도는 범위를 벗어납니다.");
+		}
+		this.year = year;
+	}
+	
+	public int getYear()
+	{
+		return year;
+	}
+	
+	public Date() {}
+	
+	public Date(int year, int month, int day)
+	{
+		this.year = year;
+		this.month = month;
+		this.day = day;
+	}
+	
+	public String info()
+	{
+		return this.year+","+month+","+day;
+	}
+}

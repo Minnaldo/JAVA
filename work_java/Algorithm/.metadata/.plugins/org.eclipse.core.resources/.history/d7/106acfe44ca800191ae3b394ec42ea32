@@ -1,0 +1,42 @@
+package Algorithm_1WEEK_D1;
+
+import java.util.Scanner;
+
+public class Algorithm_1WEEK_D2_1926 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		
+		for (int i = 1; i <= input; i++)
+		{
+			String strCnt = String.valueOf(i);
+//			System.out.print(strCnt);
+			
+			for (int j = 0; j < strCnt.length(); j++)
+			{
+				
+				
+				char chk = strCnt.charAt(j);
+				
+				if(chk == '3' || chk == '6' || chk == '9')
+				{
+					System.out.print("- ");
+				}
+				else
+					System.out.print(chk + " " );
+				
+				
+			}
+			
+			
+//			if(i % input == 3)
+//			{
+//				System.out.print("- ");
+//			}
+//			else
+//				System.out.print(i + " ");
+		}
+	}
+}

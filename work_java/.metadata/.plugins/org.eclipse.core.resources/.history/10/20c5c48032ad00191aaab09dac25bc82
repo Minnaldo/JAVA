@@ -1,0 +1,21 @@
+package day01;
+
+public class Condition {
+	public static void main(String[] args) {
+		
+		int a = 3;
+		switch(a)
+		{
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		}
+		
+	}
+}

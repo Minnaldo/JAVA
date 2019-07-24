@@ -1,0 +1,13 @@
+package Friday_Project_1WEEK;
+
+import java.util.Scanner;
+
+public class Building_BG {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+	}
+
+}

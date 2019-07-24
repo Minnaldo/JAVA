@@ -1,0 +1,16 @@
+package day01;
+
+public class Loop {
+	
+	public static void main(String[] args) {
+		
+	
+	
+	boolean flag = true;
+	
+	while(flag)
+	{
+		
+	}
+	}
+}

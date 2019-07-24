@@ -1,0 +1,78 @@
+객체지향(OOP) (Object-Oriented Programming)
+-추상화(Abstraction) =>class => object
+  class Name{
+      변수
+      메소드
+      생성자
+  }
+-캡슐화(Encapsulation) => AccessModifie(접근제어)
+  => public, protected ,private
+public : 어디서나 접근 가능.
+protected : 같은 멤버 or 상속 받았을 때만 접근가능.
+private : 본인 클래스 내에서만 접근 가능.
+default : 같은 멤버이거나 같은 패키지 이거나
+ 캡슐화 사용 이유 : 데이터무결성을 지키기 위해
+-상속성(Inheritance)
+  정의: subclass가 superclass의 모든것을 물려받는것.
+  목적 : 추가, 재정의, 형변환
+
+  -다중상속(multiple inheritance)
+   :두 개 이상의 기본 클래스를 상속 받는것
+   (단점 : 같은 기능을 물려 받으면 '모호성'이 발생한다.)
+
+* private 상속은 되는데, 접근이 안된다.
+
+* this
+  -본인 메소드,,  (ex. VipCustomer)
+  -메소드 안에서 쓸 수 있다.
+  -메소드를 가지고 있는 객체가 this 이다.
+  -this() -> 생성자       [VipCustomer의 생성자 : public VipCustomer() {} ]
+  -this.toString()  ->  VipCustomer의 toString
+
+* super
+  -부모클래스를 가리킴.  (ex. Customer)
+  -super() -> 생성자     [Customer의 생성자 :  public Customer() {} ]
+  -super("111", "홍길동", 21);   [Customer의 생성자 : public Custmer( String num, String name, int age); ]
+  -super.toString()  ->  Customer의 toString
+
+- 모든 클래스는 Object를 상속받는다.
+  : 기본클래스에 숨겨져있지만, 컴파일 할 때 나타남
+   ex)  public class Father extends Object { }
+
+-다형성(Polymorphism)
+  : Method Polymorphism  (Overload , Override)
+  : Object Polymorphism    (바라보는 시각에 따라 다르다)
+
+
+*캐스팅(Casting)
+  : Upcasting : 작은타입 -> 큰타입
+  : 명시적형변환 :  큰타입 -> 작은타입
+
+* reference data type인 class는 primitive 타이비 아니므로 크기로 비교하는건 의미가 없다.
+  그리므로 클래스의 형변환은 상속을 기반으로 형변환한다.
+
+* 서브는 슈퍼를 상속받았다. 그러므로 슈퍼를 원할때 서브가 가도된다.
+ex) 슈퍼맨을 원할 때, 슈퍼맨을 상속받은 서브가 가도 된다.
+
+  상속받았기 때문에, 가능하다.
+ Customer cc = new VipCustomer();
+* VipCustomer -> Customer  (업캐스팅)
+  [상속받은클래스] -> [상속하는 클래스]  =  (업캐스팅)
+
+ VipCustomer vv = new Customer();		  //error,, 
+ VipCustomer vv = (VipCustomer)new Customer();	  //(명시적형변환)
+ [상위클래스] -> [하위클래스] = (다운캐스팅)
+
+***장님코끼리만지기***
+
+primitive 타입은 크기와 종류를 기반	[메모리 기반이라,
+reference 타입은 상속을 기반  
+
+업캐스팅 : 여러개를 묶어서 같이 다닐수 있다.
+               바라보는 타입만 바뀐다.  (ObjectPolymorphism)
+(ObjectPolymorphism) 정의 : 레퍼런스 데이터 타입의 형변환이다.
+(MethodPolymorphism) 정의 : 
+
+***다형성(Polymorphism)이 뭐에요? : 객체 형변환이요.
+
+다운캐스팅 : 

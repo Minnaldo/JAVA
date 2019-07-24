@@ -1,0 +1,30 @@
+package edu.ssafy.chap05.two;
+
+public class HeroMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Hero[] h = new Hero[3];
+		h[0]=  new Hulk();
+		h[1] = new Spiderman();
+		h[2] = new Ironman();
+		
+		for(int i = 0; i < h.length; i++)
+		{
+			h[i].superPower();
+			if(h[i] instanceof Hulk)
+			{
+				Hulk kl = (Hulk)h[i];
+			}
+			else if(h[i] instanceof Spiderman)
+			{
+				
+			}
+			else if (h[i] instanceof Ironman)
+			{
+				
+			}
+		}
+	}
+
+}

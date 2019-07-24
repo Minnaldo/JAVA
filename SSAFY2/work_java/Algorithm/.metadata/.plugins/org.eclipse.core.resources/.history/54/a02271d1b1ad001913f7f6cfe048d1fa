@@ -1,0 +1,15 @@
+//중간값찾기 (카운팅 정렬 해보기)
+package Algorithm_2WEEK;
+
+import java.util.Scanner;
+
+public class midnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		
+	}
+
+}

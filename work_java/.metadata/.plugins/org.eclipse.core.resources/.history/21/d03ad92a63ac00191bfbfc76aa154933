@@ -1,0 +1,33 @@
+package ssafy_HW;
+
+public class ProductTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TV tv1 = new TV("QN82Q950RBFXKR", "QLED_8K_207cm", 16400000, 100, 81, "QLED");
+		TV tv2 = new TV("QN82Q950RBFXKR", "QLED_8K_207cm", 16400000, 100, 81, "QLED");
+		TV tv3 = new TV("QN82Q950RBFXKR", "QLED_8K_207cm", 16400000, 100, 81, "QLED");
+		
+		Refrigerator rf1 = new Refrigerator("RF61R91C3AP", "BESPOKE", 3599000, 200, 4);
+		Refrigerator rf2 = new Refrigerator("RF61R91C3AP", "BESPOKE", 3599000, 200, 4);
+				
+		TV[] tvArr = new TV[3];
+		Refrigerator[] rfArr = new Refrigerator[2];
+		
+		tvArr[0] = tv1;
+		tvArr[1] = tv2;
+		tvArr[2] = tv3;
+		
+		rfArr[0] = rf1;
+		rfArr[1] = rf2;
+		
+		for (int i = 0; i < tvArr.length; i++)
+		{
+			System.out.println(tvArr[i].toString());
+		}
+		
+		for (int i = 0; i < rfArr.length; i++)
+		{
+	}
+
+}

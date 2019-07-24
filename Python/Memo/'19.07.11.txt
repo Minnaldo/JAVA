@@ -1,0 +1,4 @@
+- virtualenv myenv
+- call myenv/Scripts/activate.bat
+- call myenv/Scripts/deactivate.bat
+

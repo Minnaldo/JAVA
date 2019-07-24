@@ -1,0 +1,34 @@
+package SWEA_D1;
+
+import java.util.Scanner;
+
+public class SWEA_D1_2071 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int tc = sc.nextInt();
+		int result2 = 0;
+		for(int i = 0; i < tc; i++)
+		{
+			int sum = 0;
+			int result = 0;
+			for(int j = 0; j < 10; j++)
+			{
+				sum += sc.nextInt();
+			}
+			
+//			System.out.println();
+			result = sum / 10;
+			Math.round(result);
+			
+			
+		}
+		
+		for(int i = 0; i < tc; i++)
+		{
+			System.out.println("#" + (i+1) + " " + result);
+		}
+	}
+
+}

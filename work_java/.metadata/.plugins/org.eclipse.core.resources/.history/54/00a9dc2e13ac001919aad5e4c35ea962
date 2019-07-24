@@ -1,0 +1,25 @@
+package Example;
+
+import java.util.Scanner;
+
+public class sum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		
+		int sum = 0;
+		
+		for(int i = 1; i <= input; i++)
+		{
+			for(int j = i; j <= input; j++)
+			{
+				sum += j;
+			}
+		}
+		
+		System.out.println(sum);
+	}
+}

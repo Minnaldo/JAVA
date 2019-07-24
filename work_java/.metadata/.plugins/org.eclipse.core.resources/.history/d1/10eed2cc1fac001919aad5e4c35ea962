@@ -1,0 +1,17 @@
+package ssafy_chap03_190722;
+
+public class Operation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(Math.PI);
+	}
+
+	class Hello
+	{
+		
+	}
+
+}
+
+

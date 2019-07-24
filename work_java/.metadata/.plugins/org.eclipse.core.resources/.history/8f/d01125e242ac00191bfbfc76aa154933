@@ -1,0 +1,45 @@
+package ssafy_chap04_190722;
+
+/**Person 정보클래스 */
+class Person {
+	/** 이름 */
+	String name;		//이름	//멤버변수 name	//garbage collector 가 지우면 사라짐.
+	/** 나이 */
+	int age;			//나이
+	/** 성별 */
+	boolean gender;		//성별	//여 : true, 남 : false
+	/** 주소 */
+	String addr;		//주소
+	/** Constructor */
+	Person(){				//생성자를 직접 만들지 않아도
+		this._addr;			//기본으로 생성자가 생성된다.
+		this.age;			//this는 여기서 Person이다.
+		this.name;
+		this.gender;
+	}
+	
+	
+	Person(String _name, int _age)
+	{
+		name = _name;
+		age = _age;
+	}
+		
+	/** Constructor (생성자) */
+	Person(String _name, int _age, boolean _gender, String _addr){
+		System.out.println("생성자");
+		name = _name;		//생성자가 끝나면 _name은 사라짐,
+		age = _age;
+		gender = _gender;
+		addr = _addr;
+	}
+	
+	//정보 메소드
+	String info()
+	{
+		String str = "name="+name+", age="+age+", gender="+gender+", addr="+addr;
+		return str;
+	}
+	
+	
+}

@@ -1,0 +1,39 @@
+* javac.exe Hello.java
+=> Hello.class 생성
+* java Hello
+ (java.exe 라 exe 생략.)
+* dir  :  폴더 디렉토리
+
+class Hello {
+	//public : 접근제어자,, 밖에서 호출하기 위해서
+	//static : 객체를 생성하지 않고도 메소드 호출하기 위해서
+	//void :  실행만 할 뿐.
+	//println : ln -> 개행
+	public static void main(String[] args) {
+		System.out.println("점심시간이다 이거나오면 점심 GoGo");
+	}
+}
+
+- 자바개발자 : 제임스 고슬링
+
+- Hello.class 파일을 JVM 이 실행을 함.
+
+- 객체 직렬화 인터페이스 이름 : Serialize
+ *직렬화(Serialize)란?
+  -자바 시스템 내부에서 사용되는 Object 또는 Data를 외부의 자바 시스템에서도 사용할 수 있도록 byte 형태로 데이터를 변환하는 기술.
+  -JVM(Java Virtual Machine 이하 JVM)의 메모리에 상주(힙 또는 스택)되어 있는 객체 데이터를 바이트 형태로 변환하는 기술
+
+*JAVA DataType
+1. 숫자형
+  -정수 : byte(1byte)[2^8](255), short(2byte)[2^16], int(4byte), long(8byte)	[int는 21억3천]
+  -실수 : float(4byte)[소수점6자리], double(8byte)
+	(실수는 소수점까지 생각해야 해서, int(21억3천)보다 더 적은 수)
+2. 문자형
+  -문자열은 문자의 배열,, (문자와 다르다)
+  -문자는 숫자다.  (컴퓨터는 문자를 숫자로 저장.)
+3. 논리형
+  - boolean(1byte)
+*
+-class
+-interface
+-Array

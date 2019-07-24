@@ -1,0 +1,22 @@
+package Algorithm_2WEEK;
+
+public class counting_sort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {7, 5, 6, 3, 4, 1, 2};
+		
+		//알려진 최대값을 인덱스로 저장할 수 있는 충분한 크기의 배열 생성.
+		int[] count = new int[8];
+		
+		//각 자료들의 빈도수를 계산.
+		for(int i = 0; i < arr.length; i++)
+		{
+			count[ arr[i] ]++;
+		}
+		
+		//각 자료의 빈도수를 누적빈도로 변경.
+		
+	}
+
+}

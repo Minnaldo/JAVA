@@ -1,0 +1,46 @@
+package ssafy_chap05_190723;
+
+/* static이 붙을 수 있는 위치
+ * : 멤버변수, 멤버함수, 내부클래스, 
+ * 
+ * static variable은 클래스 변수라 부르기도 한다.
+ * 
+ * static 변수는 객체를 만들어서도 만들지 않더라도 사용가능하다.
+ * st.si  or  st2.si  or  StaticTest.si
+ *  st.si에서 값을 바꾼후 st2.si로 값을 바꿔도
+ *  한 곳을 가리키기 때문에, static 값은 같은 값으로 바뀐다.
+ */
+public class StaticTest {
+	int i;
+	static int si;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// 일반 객체 변수는 그냥 사용 불가.
+//		i = 100;
+		
+		si = 10;
+		
+		//static 멤버라 객체생성을 하지 않고도, 접근 가능!!!
+		StaticTest.si = 100;
+		
+		StaticTest st = new StaticTest();
+		st.i = 7;
+		
+		//객체 생성해서 static 변수 si에 접근해도
+		//StaticTest.si 로 값을 바꾼 것과 같다.
+		//이유는 static 변수는 static 영역에만 존재하기 때문에.
+		st.si = 200;
+		
+		StaticTest st2 = new StaticTest();
+		st2.i = 20;
+		
+		System.out.println(st2.si);
+//		System.out.println(StaticTest.si);
+		
+		
+		
+	}
+
+}

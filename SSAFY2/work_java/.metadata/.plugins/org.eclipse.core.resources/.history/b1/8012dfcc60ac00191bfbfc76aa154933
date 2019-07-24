@@ -1,0 +1,13 @@
+package ssafy_HW;
+
+public class Refrigerator {
+	private String product_num;	
+	private String product_name;
+	private int	price;
+	private int num;
+	private int capacity;
+	
+	Refrigerator() {}
+	
+	
+}
