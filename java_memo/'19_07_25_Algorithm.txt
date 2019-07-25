@@ -8,3 +8,4 @@
 binarySearhch(int[] a, int low, int high, int key)
     if (low > high) then return false;	//검색 실패
     middle <  -(low+high) / 2;
+    if (key = a[middle]
