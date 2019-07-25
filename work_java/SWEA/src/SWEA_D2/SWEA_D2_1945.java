@@ -8,22 +8,30 @@ public class SWEA_D2_1945 {
 		Scanner sc = new Scanner(System.in);
 		int TC = sc.nextInt();
 		int k = 2;
+		int[] input = new int[TC];
 		
 		for(int i = 0; i < TC; i++)
 		{
 			int num = sc.nextInt();
 			
-			while(num != 1)
-			{
-				if( num % k == 0)
-				{
-					System.out.print(k + " ");
-				}
-				else
-				{
-					k++;
-				}
-			}
+			
+			
+			
+			
+			
+			
+			
+//			while(num != 1)
+//			{
+//				if( num % k == 0)
+//				{
+//					System.out.print(k + " ");
+//				}
+//				else
+//				{
+//					k++;
+//				}
+//			}
 		}
 		
 		
