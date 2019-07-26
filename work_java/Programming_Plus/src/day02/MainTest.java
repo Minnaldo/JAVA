@@ -6,6 +6,9 @@ public class MainTest {
 		// TODO Auto-generated method stub
 		
 		Animal a = new Animal();
+		
+		System.out.println(a);
+		System.out.println("=============:");
 		System.out.println(a.toString());
 		
 		//*인스턴스와 new로 생성하는 객체의 차이.
@@ -17,6 +20,7 @@ public class MainTest {
 		if(dd == dd2)
 		{
 			System.out.println("같은 강아지");
+			
 		}
 		else
 			System.out.println("다른 강아지");
@@ -29,7 +33,7 @@ public class MainTest {
 		
 		if(d == d1)
 		{
-			System.err.println("같냐? 응 같아");
+			System.out.println("같냐? 응 같아");
 		}
 		else
 			System.out.println("아니, 너희 달라");
