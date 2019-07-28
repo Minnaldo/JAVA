@@ -1,0 +1,5 @@
+package 영화관_연습;
+
+public class MovieMgr_77 {
+	Movie_77[] movies_77 = new Movie_77[100];
+}

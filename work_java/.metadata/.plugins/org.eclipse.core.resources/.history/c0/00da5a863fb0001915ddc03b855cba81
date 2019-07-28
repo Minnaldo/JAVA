@@ -1,0 +1,44 @@
+package 영화관_연습;
+
+public class MovieMgr_77 {
+	private Movie_77[] movies_77 = new Movie_77[100];
+	private int index;
+	
+	MovieMgr_77 () {}
+	
+	/** 파라미터로 전달된 영화 정보를 전달받아 배열에 저장한다. */
+	public void add(Movie m)
+	{
+		
+	}
+	
+	public Movie[] search()
+	{
+		
+	}
+	
+	public Movie[] search(String title)
+	{
+		
+	}
+	
+	public Movie[] searchDirector(String name)
+	{
+		
+	}
+	
+	public Movie[] searchGenre(String genre)
+	{
+		
+	}
+	
+	public void delete(String title)
+	{
+		
+	}
+	
+	public int getSize()
+	{
+		
+	}
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-<libraryInfo home="C:\Program Files\Zulu\zulu-8" version="1.8.0_192">
+<libraryInfo home="C:\Program Files\Zulu\zulu-8" version="1.8.0_222">
 <bootpath>
 <entry path="C:\Program Files\Zulu\zulu-8\jre\lib\resources.jar"/>
 <entry path="C:\Program Files\Zulu\zulu-8\jre\lib\rt.jar"/>

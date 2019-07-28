@@ -1,6 +1,0 @@
-package ssafy_HW_chapr05_190723;
-
-public class BookManager {
-	private Book[] Books;
-	
-}

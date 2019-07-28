@@ -5,8 +5,8 @@
       메소드
       생성자
   }
--캡슐화(Encapsulation) => AccessModifie(접근제어)
-  => public, protected ,private
+-캡슐화(Encapsulation) => AccessModifier(접근제어)
+  => public, protected , private, Defalut
 public : 어디서나 접근 가능.
 protected : 같은 멤버 or 상속 받았을 때만 접근가능.
 private : 본인 클래스 내에서만 접근 가능.
@@ -62,7 +62,7 @@ ex) 슈퍼맨을 원할 때, 슈퍼맨을 상속받은 서브가 가도 된다.
  VipCustomer vv = new Customer();		  //error,, 
  VipCustomer vv = (VipCustomer)new Customer();	  //(명시적형변환)
  [상위클래스] -> [하위클래스] = (다운캐스팅)
-
+f
 ***장님코끼리만지기***
 
 primitive 타입은 크기와 종류를 기반	[사이즈 기반이라, 크기와 종류를 기반]
@@ -84,7 +84,12 @@ reference 타입은 상속을 기반  	[사이즈로 형변환 불가, 상속을 기반으로 형변환]
 -static 메소드 안에서는 instance 메소드 불가.
    static 변수만 가능.
 
+instanceof
+:  if( book[i] instanceof Magazine)
+  
+   if( book[i] instanceof Book)
 
+: 하위클래스(Magazine)부터 상위클래스(Book) 순으로 탐색해라.
 
 
 다운캐스팅(위험한 형변환)

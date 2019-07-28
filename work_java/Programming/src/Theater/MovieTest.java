@@ -48,17 +48,21 @@ public class MovieTest {
 				}
 				break;
 			case 3:
-				String director2 = sc.next();
+				String movie_title = sc.next();
 				for(int i = 0; i < movies.length; i++)
 				{
-//					
-					
+					System.out.println(movies[i]);
 				}
-//				movietest.searchDirector("가이리치");
 				break;
 			case 4:
+				for (int i = 0; i < movies.length; i++)
+				{
+					System.out.println(movies[i]);
+				}
 				break;
 			case 5:
+				String movie_delete = sc.next();
+				movietest.delete(movie_delete);
 				break;
 			case 0:
 				break;

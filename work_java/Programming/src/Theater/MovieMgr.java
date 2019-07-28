@@ -37,17 +37,45 @@ public class MovieMgr {
 		return movies;		
 	}
 	
+	public Movie[] Movie_search(String title)
+	{
+		int cnt = 0;
+		for(int i = 0; i < index; i++)
+		{
+			if ( movies[i].getTitle().contains(title) )
+				cnt++;
+		}
+		
+		int idx = 0;
+		Movie[] temp = new Movie[cnt];
+		for (int i = 0; i < index; i++)
+		{
+			if ( movies[i].getTitle().contains(title) )
+				temp[idx++] = movies[i];
+		}
+		
+		return temp;
+	}
+	
 	//* 파라미터로 전달된 감독명의 모든 영화 정보를 검색하여 리턴. */
 	public Movie[] searchDirector(String name)
 	{
-		int i;
-		for(i = 0; i < index; i++)
+		int cnt = 0;
+		for(int i = 0; i < index; i++)
 		{
 			if(movies[i].getDirector().equals(name))
-				break;
+				cnt++;
 		}
 		
-		return movies;
+		int idx = 0;
+		Movie[] temp = new Movie[cnt];
+		for (int i = 0; i < index; i++)
+		{
+			if(movies[i].getDirector().equals(name) )
+				temp[idx++] = movies[i];
+		}
+		
+		return temp;
 	}
 	
 	//* 파라미터로 전달된 장르의 모든 영화 정보를 검색하여 리턴. */
