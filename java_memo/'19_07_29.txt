@@ -1,0 +1,93 @@
+String str = "Hello";
+	String str2 = "Hello";
+	String str3 = new String("Hello");
+	String str4 = new String("Hello");
+		
+//	str.toString();	//관습적으로 Object class에 정의해놓음.
+		
+//	System.out.println('a' + str);
+//	System.out.println(10 + 'a' + str);		//107Hello
+		
+		
+//값을 가지고 비교한다.  equals
+	if (str.equals(str2))
+	{
+		System.out.println("같지롱1~");
+	}
+		
+	if (str2.equals(str3))
+	{
+		System.out.println("같지롱2~");
+	}
+		
+	if (str3.equals(str4))
+	{
+		System.out.println("같지롱3~");
+	}
+		
+	if (str.equals(str4))
+	{
+		System.out.println("같지롱4~");
+	}
+
+출력..		
+같지롱1~
+같지롱2~
+같지롱3~
+같지롱4~
+
+		
+/** 주소를 비교하고 있다.   ==   */
+	if(str == str2)
+	{
+		System.out.println("같다1");
+	}
+	
+	if(str2 == str3)
+	{
+		System.out.println("같다2");
+	}
+		
+	if(str3 == str4)
+	{
+		System.out.println("같다3");
+	}
+	
+	if(str == str4)
+	{
+		System.out.println("같다4");
+	}
+
+출력
+같다1
+
+같다1만 출력된다.
+
+===================================
+fianl 키워드는 클래스에 붙고 상속이 안된다.
+
+
+===================================
+abstract
+: 객체화 안 됨.
+
+* Abstract를 어디서 쓰냐?
+  -
+ 
+* 추상클래스가 왜 필요하냐?
+    -상위클래스로 사용가능.
+
+=======================================
+* interface
+:'interface' 라는 키워드로 만든다.
+
+●특별히 정의하지 않아도 컴파일 시에 제한자가 추가된다.
+  -public static final 제한자가 상수 앞에 붙는다.
+  -public abstract 제한자가 상수 앞에 붙는다.
+    ->메서드 Overriding 시 항상  public 제한자를 갖아야만 한다.
+
+interface MyInterface
+{
+    public static final double PI = 3.141592;
+    public static final int FIRST = 1;
+    int THIRD = 3;		//public static final int THIRD = 3; 과 동일.

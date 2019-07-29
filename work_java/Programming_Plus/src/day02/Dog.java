@@ -14,9 +14,7 @@ public class Dog extends Animal {
 		return d;
 	}
 	
-	
-	
-	private Dog()
+	public Dog()
 	{
 		
 	}

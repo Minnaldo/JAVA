@@ -1,0 +1,262 @@
+1.
+int i = 0;
+int j = 10;
+if(i++>--j)
+      break;
+
+=> 012345
+
+2. public class Test {
+      public static void modify(int k) {
+	k += 10;
+      }
+      public main
+	int k = 10;
+	modify(k);
+	sysout(k);
+      }
+   {
+
+=> 10
+
+3. 자바의 객체 생성시에 자동 생성되어 사용되며, 수행되고 있는
+   객체 자신의 래퍼런스값을 가지는 것(keyword)은 무엇인가?
+  => this
+
+4. 자바 Modifier 중 성격이 다른 하나는?
+  -static     -public    -protected    -private
+   => static
+
+5. 생성자에 대한 내용으로 틀린것은?
+  =>생성자는 return type이 없으므로 return type을 선언하여야 한다.
+
+6. Test클래스의 drive 호출하는 방법으로 알맞지 않은것은?
+class Car extends Object {}
+class  Bus extends Car {}
+class Truck extends Car { }
+class Test {
+    public static void drive( Car c ) { }
+}
+
+  1)Test.drive( new Object() );
+  2)Test.drive( new Bus());
+  3)Test.drive( new Truck());
+  4)Test.drive( new Car());
+ =>1)Obejct
+
+7. Super 클래스를 상속받아 Sub 클래스가 구현되어 있을 때,
+  다음 자바 프로그램의 수행 결과를 적으시오.
+class Test {
+  public main()
+  {
+       Super a = new Super ();
+       Sub b = new Sub();
+
+       if(a instanceof Super) sysout("A");    //O
+       if(a instanceof Sub) sysout("B");      //X
+       if(b instanceof Super) sysout("C");   //O
+       if(b instanceof Sub) sysout("D");     //O
+  }
+}
+
+=>ACD
+
+8. 다음 코드의 실행 결과는 무엇인가?
+public class for_each_test {
+   public static void main(String[] args) {
+       int[] arr = { 1, 2, 3, 4, 5 };
+       for (int aa : arr) {
+           if (aa % 2 == 0) {
+               aa += 1;
+           }
+       }
+       for (int val : arr) {
+           System.out.print(val + " ");
+       }
+   }
+}
+
+=> 3 6 4 5 8
+
+9. 클래스들의 구조가 다음과 같을 때 아래의 자바 코드의 일부분이다.
+   밑줄 친 곳에 올 수 없는 것을 고르시오.
+class Animal extends Object {}
+class Dog extends Animal {}
+class CatDog extends Dog {}
+
+_____________ ob = new Dog( );
+
+-Animal      -Dog     -Object     -CatDog
+
+=> CatDog
+
+10. 객체지향의 특징인 Encapsulation 개념을 적용하여 클래스를 구현하고자 한다.
+정보 은닉을 하기 위한 방법으로 외부에서는 사용하지 못하게 하고
+같은 클래스내에서만 사용하도록 변수나 메서드 앞에 선언하는 Modifier(제한자)는 무엇인지.
+=>private
+
+-1
+11.다음 code의 실행 결과를 적으세요.
+class Parent {
+    void show() { Sysout("a"); }
+}
+class Child extends Parent {
+    void show() { System.out.print("b"); }
+}
+public class Test {
+    public static void main(String args[])
+    {
+      parent a= new Parent();
+      a.show();
+      Child b= new Child();
+      b.show();
+      parent c= new Child();
+      a.show();
+    }
+}
+
+=>abb
+
+
+-1
+12. 다음 코드가 한 라인씩 실행된다고 가정했을떄, 올바르지 않은것은?
+
+1)주석 1은 Child 클래스의 show()가 호출된다.
+2)주석2는 5가 출력된다.
+3)주석3은 Parent클래스의 down()이 호출된다.
+4)주석4는 Child 클래스의 up()가 호출된다.
+
+=> 보기가 달랐다는데, 어찌됐건 답은 2, 4번이라함
+   4번은 다운캐스팅,,
+
+13. 다음중 기본형내에서 형변환이 일어나지 않은 것을 고르시오.
+-float     -int     -boolean     -char
+=>boolean
+
+14. 다음과 같이 class들이 정의되어 있다. compile 시에 Error 발생하지 않는것
+class Mammal {}
+class Dog extends Mammal {}
+class Car extends Mammal {}
+
+1)Cat m1 = new Mammal();
+2)Mammal m2 = new Dog();
+3)Dog d2 = new Cat();
+4)Dog d1 = new Mammal();
+
+=>2번,,
+
+15.Child 클래스에 보기의 메서드 추가시 오류가 발생되는 코드
+1)public int show(char c) {return 0};
+2)public void show (int a) { };
+3)public float down(int n) { return 0; }
+4)public int down(float n) { return 0; }
+
+=>4번이라는데?!
+
+
+16.다음 자바코드 중 오류를 발생시키는 것을 고르시오.
+1)int k = 30;
+2)float f = 3.4;
+3)boolean b = true;
+4)char c = (char)65;
+
+=>2번 float f = 3.4f; 
+
+
+17. 다음과 같이 num 변수가 선언되어 있을 때 num 변수에 대한
+    설명으로 옳지 않은것을 고르시오.
+
+1)num 변수는 자동으로 초기화 되지 않아 쓰레기값을 가지고 있다.
+2)Abc 클래스의 인스턴스 메서드에서 num=5;은 사용할 수 있다.
+3)같은 패키지의 클래스 메서드에서 객체 생성 후 객체 변수 num=5;은 사용할 수 있다.
+4)Abc 클래스의 생성자에서 num=5 은 사용할 수 있다.
+
+=>1번 num 변수는 자동으로 초기화되지 않아 쓰레기값을 가지고 있다.
+
+
+18. 다음의 Test를 실행했을 때 결과는 무엇인지 고르시오.
+class Parent{
+    public Parent() { System.out.print("A"); }
+    public Parent(int k)
+    {
+        this();
+        sysout("B");
+    }
+}
+class Child extends Parent
+{
+    public Child() {sysout("C");}
+    public Child(int n) {sysout("D"); }
+}
+public class Test
+{
+    public static void main(String[] args)
+    {
+        new Child(30);
+    }
+}
+
+1)AD      2)D      3)ABD      4)DAB
+=>AD
+
+19.다음 코드의 실행 결과를 고르시오.
+1)AW      2)BW      3)ABW      4)BAW
+=>3)ABW
+  this.show() 가 상속받은 애로 내려간대....
+  부모의 this가 아니라 자식의 this.
+
+
+20.다음 보기와 같은 문장들이 한 문장씩만 있다고 가정했을 때,
+    break를 사용할 수 없는 곳은 어디인지 고르시오.
+1)while문장 내      2)if 문장 내      3)for 문장 내      4)switch 문장 내
+=>2)if 문장 내
+
+21. int jumsu = 100;
+  switch ~ case 문
+1)아무것도 출력 X
+2)A를 출력한다.
+3)ABC를 출력한다.
+4)ABCF를 출력한다.
+=>4)ABCF를 출력한다.
+  ..... switch ~case 문에  break가 없었음..... 
+
+
+22.다음 코드의 설명으로 올바른 것은 고르시오.
+getName,,  setName
+1)정상적으로 실행되고 Lee가 출력된다.
+2)실행 오류가 발생한다.
+3)정상적으로 실행되고 kim이 출력된다.
+4)Compile 오류가 발생한다.
+=>4)Compile 오류가 발생한다.
+ :구덩이 좀 그만 파......!!!!
+ :default 생성자가 없대.... 그래서 컴파일 에러래.. 
+
+
+23. 자바 클래스 구현시에 메서드를 오픈하여 어디서나 접근 가능한것은?
+1)static    2)public    3)protected      4)private
+=>2)public
+
+
+24. 다음과 같은 코드에 대한 설명으로 알맞은 것을 고르시오.
+" hello"
+1)컴파일 오류가 발생한다.
+2)Kim hello 가 출력된다.
+3)Customer@32e23a21 hello가 출력된다.
+4실행 시 오류가 발생한다.
+  =>2)Kim hello 가 출력된다.
+
+25.다음 코드의 실행 결과를 고르시오.
+class Test
+{
+    public static void main(String[] args)
+    {
+       int var = 42/4;
+       if(var > 10 && ++var > 3)
+       {
+	var = var + 10;
+       }
+}
+
+1)21.5      2)21      3)10      4)20
+=>3)10
+  if문으로 안들어가!!!  Yes~~~

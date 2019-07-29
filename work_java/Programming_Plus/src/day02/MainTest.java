@@ -5,9 +5,11 @@ public class MainTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Animal a = new Animal();
+		Animal a = new Animal();	
+		Animal b = new Dog();
 		
-		System.out.println(a);
+//		System.out.println(b);
+		System.out.println(a);	//혜선 : 역시 갓혜선 , 지원 : NULL
 		System.out.println("=============:");
 		System.out.println(a.toString());
 		
