@@ -68,4 +68,12 @@ public class Manager {
 		}
 		return null;
 	}
+	
+	public void allWork()
+	{
+		for(int i = 0; i < index; i++)
+		{
+			System.out.println(emps[i].work());
+		}
+	}
 }

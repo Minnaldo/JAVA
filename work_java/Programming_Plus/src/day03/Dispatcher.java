@@ -77,6 +77,11 @@ public class Dispatcher {
 			{
 				flag = false;
 			}
+			
+			if(menu == 99)
+			{
+				man.allWork();
+			}
 
 		}
 	}
@@ -87,5 +92,4 @@ public class Dispatcher {
 		new Dispatcher().go();
 		
 	}
-
 }
