@@ -3,7 +3,7 @@ package Book_WS_Java_08;
 public class Magazine extends Book{
 	private int month;
 	
-	
+	public Magazine() {}
 	
 	public Magazine(String isbn, String title, int price, int quantity, int month) {
 		super(isbn, title, price, quantity);

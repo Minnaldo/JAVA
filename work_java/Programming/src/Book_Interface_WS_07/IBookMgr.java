@@ -1,5 +1,7 @@
 package Book_Interface_WS_07;
 
+import Book_WS_Java_08.Book;
+
 public interface IBookMgr {
 
 	public void addBook(Book b);

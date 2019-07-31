@@ -6,6 +6,8 @@ public class Book {
 	private int price;
 	private int quantity;
 	
+	public Book() {}
+	
 	public Book(String isbn, String title, int price, int quantity) {
 		super();
 		this.isbn = isbn;
