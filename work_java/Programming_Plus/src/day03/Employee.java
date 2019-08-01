@@ -1,6 +1,8 @@
 package day03;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable{
 	protected int num;
 	protected int worktime;
 	protected int addtime;

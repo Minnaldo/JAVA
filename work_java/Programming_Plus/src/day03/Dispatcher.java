@@ -1,17 +1,20 @@
 package day03;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Dispatcher {
-	private Manager man;
+	private IManager man;
 	private Scanner scan;
 	private boolean flag = true;
 	private int menu = 0;
 	int num = 0;
 	
+	//getInstance -> 싱글톤..!!!
 	public Dispatcher()
 	{
-		man = Manager.getInstance();
+		man = ListManager.getInstance();
+		man.restore();
 		scan = new Scanner(System.in);
 	}
 	
@@ -25,7 +28,7 @@ public class Dispatcher {
 			
 			if(menu == 1)
 			{
-				Employee[] searchAll = man.search_all();
+				ArrayList<Employee> searchAll = man.search_all();
 				for(Employee emp : searchAll)
 				{
 					System.out.println(emp.whoami());
@@ -70,17 +73,27 @@ public class Dispatcher {
 			{
 				System.out.println("조회하려고 하는 근로자의 번호를 입력하세요.");
 				num = scan.nextInt();
-				Employee search = man.search(num);
-				System.out.println(search.whoami());
+				Employee search;
+				try {
+					search = man.search(num);
+					System.out.println(search.whoami());
+				} catch (MyDataNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.print();
+				}
 			}
+			
 			if(menu == 6)
 			{
+				man.save();
 				flag = false;
+//				break;
 			}
 			
 			if(menu == 99)
 			{
 				man.allWork();
+//				break;
 			}
 
 		}
