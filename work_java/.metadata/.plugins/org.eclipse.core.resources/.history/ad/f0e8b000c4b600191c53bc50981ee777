@@ -1,0 +1,33 @@
+package HW_Product;
+
+
+public class TV extends Product{
+	private int internet_access;
+	private int inch;
+
+	public TV() {
+	}
+	
+	public TV(int internet_access) {
+		super();
+		this.internet_access = internet_access;
+		this.inch = inch;
+	}
+
+	public TV(String productNum, String name, int price, int quantity, int internet_access) {
+		super(productNum, name, price, quantity);
+		this.internet_access = internet_access;
+	}
+
+	@Override
+	public String toString() {
+		return "TV [internet_access=" + internet_access + ", getProductNum()=" + getProductNum() + ", getName()="
+				+ getName() + ", getPrice()=" + getPrice() + ", getQuantity()=" + getQuantity() +	"]";
+	}
+
+	
+	
+	
+	
+	
+}

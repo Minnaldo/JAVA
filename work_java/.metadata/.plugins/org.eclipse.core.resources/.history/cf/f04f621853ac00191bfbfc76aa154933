@@ -1,6 +1,0 @@
-package com.ssafy.Book;
-
-public class Book {
-	private String isbn;
-	private String title;
-}

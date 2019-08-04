@@ -1,0 +1,5 @@
+package HW_Product;
+
+public class ProductNotFoundException extends Exception {
+
+}

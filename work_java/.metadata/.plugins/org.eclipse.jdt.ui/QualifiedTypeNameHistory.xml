@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.ssafy.Book.Book"/>
 <fullyQualifiedTypeName name="com.ssafy.Magazine"/>
 <fullyQualifiedTypeName name="ssafy_HW.TV"/>
@@ -14,6 +13,19 @@
 <fullyQualifiedTypeName name="edu.ssafy.chap05.two.Spiderman"/>
 <fullyQualifiedTypeName name="edu.ssafy.chap05.two.HeroManager"/>
 <fullyQualifiedTypeName name="ssafy_chap05_190723.StaticTest"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="영화관_연습.Movie_77"/>
+<fullyQualifiedTypeName name="Product_HW_Java_08.IProductMgr"/>
+<fullyQualifiedTypeName name="Product_HW_Java_08.ProductMgrImpl"/>
+<fullyQualifiedTypeName name="Product_HW_Java_08.TV"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="HW_Product.TV"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="HW_Product.Refrigerator"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="HW_Product.ProductTest"/>
+<fullyQualifiedTypeName name="HW_Product.ProductMgrImpl"/>
 </qualifiedTypeNameHistroy>

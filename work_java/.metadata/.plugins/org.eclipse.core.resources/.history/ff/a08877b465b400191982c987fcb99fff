@@ -1,0 +1,18 @@
+package Product_HW_Java_08;
+
+import java.util.Scanner;
+
+public class ProductTest {
+	public static void main(String[] args) {
+		IProductMgr manager = new ProductMgrImpl();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		while(true)
+		{
+			System.out.println(""));
+		}
+	}
+}

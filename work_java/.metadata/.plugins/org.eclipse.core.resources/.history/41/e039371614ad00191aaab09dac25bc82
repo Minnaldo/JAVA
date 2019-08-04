@@ -1,5 +1,0 @@
-package edu.ssafy.chap05.two;
-
-public class Spiderman extends Hero {
-
-}

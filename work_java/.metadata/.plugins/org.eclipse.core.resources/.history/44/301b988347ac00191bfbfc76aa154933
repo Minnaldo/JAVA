@@ -1,9 +1,0 @@
-package ssafy_chap04_190722;
-
-public class Calculator {
-	
-	int add(int a, inb )
-	{
-		return a+b;
-	}
-}

@@ -1,0 +1,10 @@
+package HW_Product;
+
+public class ProductNotFoundException extends Exception {
+	String errmsg = "��ǰ�� �������� �ʽ��ϴ�.";
+	public ProductNotFoundException() {}
+	
+	public String showErr() {
+		return errmsg;
+	}
+}

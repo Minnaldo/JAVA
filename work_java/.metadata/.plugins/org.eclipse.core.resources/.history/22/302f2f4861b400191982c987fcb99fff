@@ -1,0 +1,16 @@
+package Product_HW_Java_08;
+
+public class ProductMgrImpl implements IProductMgr {
+	private static ProductMgrImpl man = new ProductMgrImpl();
+
+	
+	
+	@Override
+	public void addProduct(Product add_product) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+
+}

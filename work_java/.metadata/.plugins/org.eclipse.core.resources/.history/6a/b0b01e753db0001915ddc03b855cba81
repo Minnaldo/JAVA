@@ -1,8 +1,0 @@
-package 영화관_연습;
-
-public class MovieMgr_77 {
-	private Movie_77[] movies_77 = new Movie_77[100];
-	private int index;
-	
-	
-}

@@ -1,7 +1,0 @@
-package 영화관_연습;
-
-public class Movie_77 {
-	private String title;
-	private String director;
-	private int grade;
-}
