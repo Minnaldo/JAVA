@@ -1,6 +1,8 @@
 package Book_WS_Java_08;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable{
 	private String isbn;
 	private String title;
 	private int price;

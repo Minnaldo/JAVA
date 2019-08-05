@@ -1,0 +1,29 @@
+//FileReader : 한글 읽어오기위해.
+split,,
+readLine : 개행 문자를 읽지 않는다.
+
+DuplicateException : add 중, 중복,,
+-생성자 안에서 super 생성자 호출하는거
+ :public class Dupli   extends Exception {
+   String errmsg;
+   
+  //기본생성자에 출력
+   public DuplicateException() {
+       super("Duplic");
+   }
+   public DuplicateException(String errmsg) {
+       
+   }
+
+
+CodeNotFoundException : 하나도 발견되지 않았을 때,,
+   codenotefoundexception    throw 와 try~catch 차이(구분 기준)
+ ->상황마다 다른데,,
+ 예를들어, search를 한 후, 프린트를 하는데
+ 객체가 없는데, 프린트를 하는게 말이 안된다.
+ 이럴 때는, 무조건 throw 처리를 해줘야한다.
+
+ProductNotFoundException : 상품 존재하지 X
+  ->
+
+객체 저장은 자바끼리 된다.

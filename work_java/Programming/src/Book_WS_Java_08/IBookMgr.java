@@ -16,11 +16,11 @@ public interface IBookMgr {
 	
 	/** 도서가 판매되어 재고 수량을 빼는 기능 */
 	//+sell(isbn:String, quantity:int) throws QuantityException, ISBNNotFoundException: void
-	public void sell(String isbn, int quantity) throws QuantityException, ISBNNotFoundException;
+	public void sell(String isbn, int quantity);
 	
 	/** 도서가 구매되어 재고 수량을 더하는 기능  */
 	//+buy(isbn:String, quantity:int) throws ISBNNotFoundException: void
-	public void buy(String isbn, int quantity) throws ISBNNotFoundException;
+	public void buy(String isbn, int quantity);
 	
 	/**getTotalAmount(): int */
 	//재고 도서들의  (수량*금액)을 하여 총 재고 금액을 구하여 리턴
@@ -33,5 +33,7 @@ public interface IBookMgr {
 	/**+close() */
 	//프로그램 종료시에 호출되어지며, ArrayList에 있는 도서 정보를 파일로 저장한다.
 	public void close();
+	
+	public void send();
 	
 }

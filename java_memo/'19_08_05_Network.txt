@@ -1,0 +1,37 @@
+* IP / port
+  :IP와port를 알고있으면, 통신을 할 수 있다.
+
+TCP Protocol
+주소체계로는 IP/port
+TCP/IP
+
+2)소켓 프로그래밍
+  :TCP방식의 네트워크 프로그래밍을 지원한다.
+  
+-TCP : 전화와 마찬가지로 두 노드가 1:1로 연결 후 신뢰성 있는 통신을 한다.
+       여기서 신뢰성 있다는 말은 데이터의 전송 순서가 보장되며 데이터의
+       수신 여부가 확인되는 것이다. 이런 절차상 문제로 UDP보다는 속도가 느리다.
+-UDP : TV 방송처럼 노드간 연결은 없고 서버는 언제나 데이터를 보내며 관심있는
+       클라이언트만 데이터를 수신하는 구조로 TCP와 달리 1:!은 물론
+       1:n, n:n 등 다양한 접속 형태가 가능하며 통신 속도가 빠르다.
+       하지만, 신뢰성 없는 데이터 전송이 이뤄지므로 전송 순서가 바뀐다거나
+       수신 여부의 확인이 어렵다.
+
+
+FTP : 애플리케이션 계층의 통신 프로토콜  (파일 주고받는 것에 최적)
+TELNET : 
+HTTP : HTML 받는데 최적화
+
+
+  연결하는 쪽	:  연결받는 쪽
+       콜러     	       콜리
+   클라이언트   	      서   버
+아이패드,스마트폰       무선이어폰
+    Socket		    Server Socket
+    IP, port	        Ip, Port
+Connect(Ip,Port)  ----->   Accept()
+     Socket()	     Socket(Ip,port)
+  (Ip,port),client	          server
+       I.O		           I.O
+outputstream   ---------->inputstream
+inputstream  <----------- outputstream
