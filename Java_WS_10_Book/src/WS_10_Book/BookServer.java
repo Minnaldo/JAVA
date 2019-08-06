@@ -13,18 +13,19 @@ public class BookServer {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		ServerSocket ss = new ServerSocket(7000);
 		
-		ObjectInputStream ois = null;
-		ObjectOutputStream oos = null;
+		ServerSocket ss = new ServerSocket(7000);	//ServerSocket
+		
+		ObjectInputStream ois = null;				//ObjectInputStream
+//		ObjectOutputStream oos = null;
 	
 		try {
 			while(true)
 			{
 				System.out.println("서버는 기다린다");
-				Socket cli = ss.accept();
+				Socket cli = ss.accept();			
 				cli.getInputStream();
-				cli.getOutputStream();
+//				cli.getOutputStream();
 				
 				ois = new ObjectInputStream(new BufferedInputStream(cli.getInputStream()));
 				
@@ -35,15 +36,15 @@ public class BookServer {
 					System.out.println(b);
 				}
 				
-				oos = new ObjectOutputStream(new BufferedOutputStream(cli.getOutputStream()));
-				
-				oos.writeObject(cus);
-				oos.flush();
+//				oos = new ObjectOutputStream(new BufferedOutputStream(cli.getOutputStream()));
+//				
+//				oos.writeObject(cus);
+//				oos.flush();
 			}
 		} catch(IOException e)
 		{
 			ois.close();
-			oos.close();
+//			oos.close();
 		}
 	}
 

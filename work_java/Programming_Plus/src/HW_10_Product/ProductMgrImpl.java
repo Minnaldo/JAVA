@@ -217,7 +217,7 @@ public class ProductMgrImpl implements IProductMgr {
 		try
 		{
 			ArrayList<Product> list = new ArrayList<Product>();
-			Socket ser = new Socket("192.168.137.206", 7000);
+			Socket ser = new Socket("localhost", 7000);
 			oos = new ObjectOutputStream(new BufferedOutputStream(ser.getOutputStream()));
 			
 			for(Product p : pList)
