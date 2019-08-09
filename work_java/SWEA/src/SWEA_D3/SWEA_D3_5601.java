@@ -12,8 +12,12 @@ public class SWEA_D3_5601 {
 		for (int tc = 1; tc <= T; tc++) {
 			int num = sc.nextInt();
 			
-			
+			System.out.print("#" + tc);
+			for(int i = 1; i <= num; i++)
+			{
+				System.out.print(" " + 1 + "/" + num);
+			}
+			System.out.println();
 		}
 	}
-
 }
