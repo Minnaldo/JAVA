@@ -64,7 +64,6 @@ public class 소수찾기 {
 			 * 10 15 20 25 30 35 ... 번째 인덱스에 false를 칠하자.
 			 * (int)Math.sqrt(i) ... 번째 인덱스에도 false...
 			 */
-			
 			int num1 = sc.nextInt();
 			int num2 = sc.nextInt();
 			
@@ -78,6 +77,10 @@ public class 소수찾기 {
 			//...
 			//...
 			//10까지...
+			
+			//나누어지는건 소수가 아니니
+			//곱해지는거 또한 소수가 아니다.
+			//ex) 56 -> 8 x 7   : 56은 8과 7로 나누어진다.
 			for(int i = 2; i * i <= num2; i++)
 			{
 				for(int j = 2; i * j <= num2; j++)
