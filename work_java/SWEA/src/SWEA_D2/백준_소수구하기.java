@@ -19,6 +19,7 @@ public class 백준_소수구하기 {
 			for(int i = 2; i * i <= num2; i++)	{
 				for(int j = 2; i * j <= num2; j++)	{
 					era[i * j] = false;
+					break;
 				}
 			}
 

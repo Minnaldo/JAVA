@@ -12,7 +12,7 @@ public class SWEA_D2_2007 {
         {
             String text = sc.next();
             int checkL = -1;
-            for(int i = 1; i < 10; i++) 
+            for(int i = 1; i <= 10; i++) 
             {
                 String str  = text.substring(0,i);
                 String next = text.substring(i,i+i);
