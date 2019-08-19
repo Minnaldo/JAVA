@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;HW_Java_03_조민.새폴더&apos; to &apos;HW_Java_03_조민_0716&apos;&#x0D;&#x0A;- Original project: &apos;HW_Java_03_조민&apos;&#x0D;&#x0A;- Original element: &apos;HW_Java_03_조민/src/HW_Java_03_조민.새폴더&apos;&#x0D;&#x0A;- Renamed element: &apos;HW_Java_03_조민/src/HW_Java_03_조민_0716&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;HW_Java_03_조민.새폴더&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;HW_Java_03_조민.새폴더" name="HW_Java_03_조민_0716" qualified="false" references="true" stamp="1563755060828" textual="false" version="1.0"/>
-</session>
