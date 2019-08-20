@@ -16,7 +16,7 @@ public class BookDAO {
 	private ResultSet rs;
 	private int cnt;
 	
-	//static block¿¡¼­ ÇÑ¹ø¸¸ ½ÇÇà!
+	//static blockï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!
 	static {
 		try {
 			//1. Driver Loading
@@ -28,23 +28,23 @@ public class BookDAO {
 	}
 
 	public BookDAO() throws SQLException {
-		//2. Connection ¿¬°á
-		conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/testDb?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8", "ssafy", "ssafy");
+		//2. Connection ï¿½ï¿½ï¿½ï¿½
+		conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/testdb?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8", "ssafy", "ssafy");
 
 	}
 
 	public void insertBook(Book book)
 	{
-		String str = "insert into Books (isbn, title, author, publisher, price, description) values(?, ?, ?, ?, ?, ?)";
+		String str = "insert into Books (isbn, title, publisher, price, description, authorno) values(?, ?, ?, ?, ?, ?)";
 
 		try {
 			st = conn.prepareStatement(str);
 			st.setString(1, book.getIsbn());
 			st.setString(2, book.getTitle());
-			st.setString(3, book.getAuthor());
-			st.setString(4, book.getPublisher());
-			st.setInt(5, book.getPrice());
-			st.setString(6, book.getDescription());
+			st.setString(3, book.getPublisher());
+			st.setInt(4, book.getPrice());
+			st.setString(5, book.getDescription());
+			st.setInt(6, book.getAuthorno());
 			st.execute();
 			cnt++;
 
@@ -55,18 +55,38 @@ public class BookDAO {
 
 
 	}
+	
+	public void insertAuthor(Author author)
+	{
+//		String str = "insert into Books (isbn, title, publisher, price, description, authorno) values(?, ?, ?, ?, ?, ?)";
+		String str = "insert into Author (authorno, name, phone) values(?, ?, ?)";
+		
+		try {
+			st = conn.prepareStatement(str);
+			st.setInt(1, author.getAuthorno());
+			st.setString(2, author.getName());
+			st.setString(3, author.getPhone());
+			st.execute();
+			cnt++;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 
 	public void updateBook(Book book)
 	{
-		String str = "update Books set title=?, author=?, publisher=?, price=?, description=? where isbn=?";
+		String str = "update Books set title=?, publisher=?, price=?, description=?, authorno=? where isbn=?";
 
 		try {
 			st = conn.prepareStatement(str);
-			st.setString(1, book.getTitle());
-			st.setString(2, book.getAuthor());
+			st.setString(2, book.getTitle());
 			st.setString(3, book.getPublisher());
 			st.setInt(4, book.getPrice());
 			st.setString(5, book.getDescription());
+			st.setInt(4, book.getAuthorno());
 			st.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -105,10 +125,11 @@ public class BookDAO {
 				Book books = new Book();
 				books.setIsbn(rs.getString("isbn"));
 				books.setTitle(rs.getString("title"));
-				books.setAuthor(rs.getString("author"));
+//				books.setAuthor(rs.getString("author"));
 				books.setPublisher(rs.getString("publisher"));
 				books.setPrice(rs.getInt("price"));
 				books.setDescription(rs.getString("description"));
+				books.setAuthorno(rs.getInt("authorno"));
 				list.add(books);
 			}
 		} catch (SQLException e) {
@@ -137,10 +158,11 @@ public class BookDAO {
 				books = new Book();
 				books.setIsbn(rs.getString("isbn"));
 				books.setTitle(rs.getString("title"));
-				books.setAuthor(rs.getString("author"));
+//				books.setAuthor(rs.getString("author"));
 				books.setPublisher(rs.getString("publisher"));
 				books.setPrice(rs.getInt("price"));
 				books.setDescription(rs.getString("description"));
+				books.setAuthorno(rs.getInt("Authorno"));
 			}
 			else
 			{
@@ -154,6 +176,41 @@ public class BookDAO {
 		
 		return books;
 	}
+	
+	public Book findAuthor(String author)
+	{
+		String sql = "select title, price, publisher from Books where author=?";
+		
+		Book books = null;
+		
+		try {
+			st = conn.prepareStatement(sql);
+			st.setString(1, author);
+			
+			rs = st.executeQuery();
+			
+			if(rs.next())
+			{
+				books = new Book();
+//				books.setIsbn(rs.getString("isbn"));
+				books.setTitle(rs.getString("title"));
+//				books.setAuthor(rs.getString("author"));
+				books.setPublisher(rs.getString("publisher"));
+				books.setPrice(rs.getInt("price"));
+//				books.setDescription(rs.getString("description"));
+			}
+			else
+			{
+				return null;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return books;
+	}
+	
 	
 	public int count()
 	{

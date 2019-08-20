@@ -3,7 +3,7 @@ package SWEA_D3;
 
 import java.util.Scanner;
 
-public class SWEA_D3_6730 {
+public class SWEA_D3_6730_장애물경주난이도 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

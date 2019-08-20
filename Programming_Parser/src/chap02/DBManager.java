@@ -8,13 +8,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 
-//DBManager´Â SingletoneÀ» Àû¿ëÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
+//DBManagerï¿½ï¿½ Singletoneï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ä°¡ ï¿½ï¿½ï¿½ï¿½.
 public class DBManager {
 	private Connection conn;
 	private PreparedStatement st;
 	private ResultSet rs;
 
-	//static block¿¡¼­ ÇÑ¹ø¸¸ ½ÇÇà!
+	//static blockï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!
 	static {
 		try {
 			//1. Driver Loading
@@ -26,9 +26,24 @@ public class DBManager {
 	}
 
 	public DBManager() throws SQLException {
-		//2. Connection ¿¬°á
+		//2. Connection ï¿½ï¿½ï¿½ï¿½
 		conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/testDb?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8", "ssafy", "ssafy");
 
+	}
+
+	public Connection getConnection() throws SQLException
+	{
+		try {
+			//1. Driver Loading
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//2. Connection ï¿½ï¿½ï¿½ï¿½
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/testDb?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8", "ssafy", "ssafy");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return conn;
 	}
 
 	public boolean insertCustomer(String name, int age, String addr)
@@ -45,7 +60,7 @@ public class DBManager {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	//preparestatement´Â statement »ó¼Ó¹ÞÀº ¾Ö´Ù.
+		}	//preparestatementï¿½ï¿½ statement ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½.
 
 		return res;
 	}
@@ -88,14 +103,14 @@ public class DBManager {
 	}
 
 
-	//ÀüÃ¼ Á¶È¸ & °Ë»öÁ¶È¸
+	//ï¿½ï¿½Ã¼ ï¿½ï¿½È¸ & ï¿½Ë»ï¿½ï¿½ï¿½È¸
 	public ArrayList<CustomerVD> queryCustomer() {	
 		String sql = "select * from Customer";
 
 		ArrayList<CustomerVD> list = null;
 		try {
 			st = conn.prepareStatement(sql);
-			//4. Query ½ÇÇà
+			//4. Query ï¿½ï¿½ï¿½ï¿½
 			rs = st.executeQuery();
 
 			list = new ArrayList<>();
@@ -123,7 +138,7 @@ public class DBManager {
 		try {
 			st = conn.prepareStatement(sql);
 			st.setInt(1, num);
-			//4. Query ½ÇÇà
+			//4. Query ï¿½ï¿½ï¿½ï¿½
 			rs = st.executeQuery();
 			if(rs.next())
 			{

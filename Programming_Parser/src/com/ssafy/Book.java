@@ -3,24 +3,26 @@ package com.ssafy;
 public class Book {
 	private String isbn;
 	private String title;
-	private String author;
+//	private String author;
 	private String publisher;
 	private int price;
-	private String description;	
+	private String description;
+	private int authorno;
 
 	public Book() {
 
 	}
 
 
-	public Book(String isbn, String title, String author, String publisher, int price, String description) {
+	public Book(String isbn, String title, String publisher, int price, String description, int authorno) {
 		super();
 		this.isbn = isbn;
 		this.title = title;
-		this.author = author;
+//		this.author = author;
 		this.publisher = publisher;
 		this.price = price;
 		this.description = description;
+		this.authorno = authorno;
 	}
 
 
@@ -44,14 +46,14 @@ public class Book {
 	}
 
 
-	public String getAuthor() {
-		return author;
-	}
-
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+//	public String getAuthor() {
+//		return author;
+//	}
+//
+//
+//	public void setAuthor(String author) {
+//		this.author = author;
+//	}
 
 
 	public String getPublisher() {
@@ -83,13 +85,20 @@ public class Book {
 		this.description = description;
 	}
 
-
-	@Override
-	public String toString() {
-		return "Book [isbn=" + isbn + ", title=" + title + ", author=" + author + ", publisher=" + publisher
-				+ ", price=" + price + ", description=" + description + "]";
+	public int getAuthorno() {
+		return authorno;
 	}
 
 
+	public void setAuthorno(int authorno) {
+		this.authorno = authorno;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Book [isbn=" + isbn + ", title=" + title + ", publisher=" + publisher + ", price=" + price
+				+ ", description=" + description + ", authorno=" + authorno + "]";
+	}
 
 }

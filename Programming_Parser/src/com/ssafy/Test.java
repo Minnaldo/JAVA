@@ -21,12 +21,13 @@ public class Test {
 		
 		while(true)
 		{
-			System.out.println("1ÀÔ·Â 2.¼öÁ¤ 3.»èÁ¦ 4.Á¶È¸ 5.°Ë»ö 6.°³¼ö7.Á¾·á");
+			System.out.println("1.ì‚½ì…ï¿½ 2.ìˆ˜ì • 3.ì‚­ì œ4.ì¡°íšŒ 5.Isbnê²€ìƒ‰ 6.ì €ìê²€ìƒ‰7.ì¢…ë£Œ");
 			menu = sc.nextInt();
 			switch(menu)
 			{
 			case 1:
-				insert();
+				Author_insert();
+				Book_insert();
 				printAllBooks();
 				break;
 			case 2:
@@ -44,6 +45,9 @@ public class Test {
 				search();
 				break;
 			case 6:
+				searchAuthor();
+				break;
+			case 7:
 				count();
 				break;
 
@@ -56,45 +60,63 @@ public class Test {
 
 	}
 	
-	private void insert()
+	private void Author_insert()
+	{
+		Author author = new Author();
+		
+		System.out.println("ì‚½ì… í•  authornoì„ ì…ë ¥í•˜ì„¸ìš”.");
+		author.setAuthorno(sc.nextInt());
+		System.out.println("ì‚½ì… í•  nameì„ ì…ë ¥í•˜ì„¸ìš”.");
+		author.setName(sc.next());
+		System.out.println("ì‚½ì… í•  phoneì„ ì…ë ¥í•˜ì„¸ìš”.");
+		author.setPhone(sc.next());
+		dao.insertAuthor(author);
+	}
+	
+	private void Book_insert()
 	{
 		Book books = new Book();
 		
-		System.out.println("»ğÀÔ ÇÒ IsbnÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•  Isbnì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setIsbn(sc.next());
-		System.out.println("»ğÀÔ ÇÒ titleÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•  titleì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setTitle(sc.next());
-		System.out.println("»ğÀÔ ÇÒ authorÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
-		books.setAuthor(sc.next()); 
-		System.out.println("»ğÀÔ ÇÒ publisherÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+//		System.out.println("ì‚½ì… í•   authorï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+//		books.setAuthor(sc.next()); 
+		System.out.println("ì‚½ì… í•   publisherì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setPublisher(sc.next());
-		System.out.println("»ğÀÔ ÇÒ priceÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•   priceì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setPrice(sc.nextInt());
-		System.out.println("»ğÀÔ ÇÒ descriptionÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•   descriptionì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setDescription(sc.next());
+		System.out.println("ì‚½ì… í•   authornoì„ ì…ë ¥í•˜ì„¸ìš”.");
+		books.setAuthorno(sc.nextInt()); 
 		dao.insertBook(books);
 	}
+	
 	
 	private void update()
 	{
 		Book books = new Book();
 		
-		System.out.println("¼öÁ¤ ÇÒ titleÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•  titleì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setTitle(sc.next());
-		System.out.println("¼öÁ¤ ÇÒ authorÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
-		books.setAuthor(sc.next()); 
-		System.out.println("¼öÁ¤ ÇÒ publisherÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+//		System.out.println("ì‚½ì… í•   authorï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+//		books.setAuthor(sc.next()); 
+		System.out.println("ì‚½ì… í•   publisherì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setPublisher(sc.next());
-		System.out.println("¼öÁ¤ ÇÒ priceÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•   priceì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setPrice(sc.nextInt());
-		System.out.println("¼öÁ¤ ÇÒ descriptionÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚½ì… í•   descriptionì„ ì…ë ¥í•˜ì„¸ìš”.");
 		books.setDescription(sc.next());
+		System.out.println("ì‚½ì… í•   authornoì„ ì…ë ¥í•˜ì„¸ìš”.");
+		books.setAuthorno(sc.nextInt()); 
 		dao.updateBook(books);
 	}
 	
 	private void delete()
 	{
-		System.out.println("»èÁ¦ÇÒ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‚­ì œí•  isbnì„ ì…ë ¥í•˜ì„¸ìš”.");
 		String isbn = sc.next();
 		dao.deleteBook(isbn);
 	}
@@ -108,15 +130,22 @@ public class Test {
 	}
 	
 	private void search() {
-		System.out.println("°Ë»öÇÒ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ê²€ìƒ‰í•  Isbnì„ ì…ë ¥í•˜ì„¸ìš”.");
 		String Isbn = sc.next();
 		Book books = dao.findBook(Isbn);
 		System.out.println(books);
 	}
 	
+	private void searchAuthor() {
+		System.out.println("ê²€ìƒ‰í•  ì‘ê°€ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+		String Author = sc.next();
+		Book books = dao.findAuthor(Author);
+		System.out.println(books);
+	}
+	
 	private void count()
 	{
-		System.out.println("ÀüÃ¼ µµ¼­ °³¼ö´Â : " + dao.count());
+		System.out.println("í•„ë“œ ê°œìˆ˜ : " + dao.count());
 		
 	}
 	

@@ -16,23 +16,20 @@ public class SWEA_D3_7510_상원이의연속합 {
 			{
 				for(int j = i; j <= num; j++)
 				{
+					sum += j;
+					
+					if(sum == num)
+					{
+						cnt++;
+						break;
+					}
+					
 					if(sum > num)
 					{
 						sum = 0;
 						break;
 					}
-
-					else if(sum < num)
-					{
-						sum += j;
-					}
-
-					if(sum == num)
-					{
-						cnt++;
-						sum = 0;
-//						continue;
-					}
+					
 				}
 			}
 
@@ -41,3 +38,25 @@ public class SWEA_D3_7510_상원이의연속합 {
 	}
 
 }
+
+
+
+
+
+//if(sum > num)
+//{
+//	sum = 0;
+//	break;
+//}
+//
+//else if(sum < num)
+//{
+//	sum += j;
+//}
+//
+//if(sum == num)
+//{
+//	cnt++;
+//	sum = 0;
+////	continue;
+//}
