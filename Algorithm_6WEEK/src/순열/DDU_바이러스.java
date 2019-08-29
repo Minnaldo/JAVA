@@ -38,11 +38,11 @@ public class DDU_바이러스 {
 				visited[i]=true;
 			}
 		}
-		DFS();
+		BFS();
 		System.out.println(cnt);
 	}
 
-	static void DFS() {
+	static void BFS() {
 		while(!q.isEmpty()) {
 			Point n=q.poll();
 			int nx=n.x;
@@ -57,4 +57,5 @@ public class DDU_바이러스 {
 			}
 		}
 	}
+	
 }
