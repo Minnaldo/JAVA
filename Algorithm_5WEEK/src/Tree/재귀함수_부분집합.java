@@ -46,16 +46,6 @@ public class 재귀함수_부분집합 {
 		powerset(arr, idx+1, sel);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	static void recur(int n, int idx, int[] arr) {
 		//기저파트(재귀 함수가 종료되는 조건)
 		if( idx == n )

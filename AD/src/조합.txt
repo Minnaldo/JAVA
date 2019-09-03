@@ -1,0 +1,28 @@
+*а╤гу
+
+package self;
+
+import java.util.Arrays;
+
+public class combination {
+
+   static int[] arr= {1,2,3,4};
+   static int[] brr=new int[2];
+   
+   public static void main(String[] args) {
+      // TODO Auto-generated method stub
+      combination(0,0);
+   }
+   static void combination(int n,int c) {
+      if(c==brr.length) {
+         System.out.println(Arrays.toString(brr));
+         return;
+      }
+      if(n==arr.length) {
+         return;
+      }
+      brr[c]=arr[n];
+      combination(n+1,c+1);
+      combination(n+1,c);
+   }
+}

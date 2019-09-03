@@ -1,0 +1,40 @@
+*집합의 모든 부분집합 구하기
+
+package self;
+
+public class powerset_recur {
+
+   static int[] arr= {1,2,3};
+   static boolean[] chk=new boolean[arr.length];
+   
+   public static void main(String[] args) {
+      // TODO Auto-generated method stub
+      power(0);
+      System.out.println("부분집합의 합");
+      subsum(0,0);
+   }
+   static void power(int c) {
+      if(c==arr.length) {
+         for (int i = 0; i < chk.length; i++) {
+            if(chk[i]==true) {
+               System.out.print(arr[i]+" ");
+            }
+         }
+
+         System.out.println();
+         return;
+      }
+      chk[c]=true;
+      power(c+1);
+      chk[c]=false;
+      power(c+1);
+   }
+   static void subsum(int c,int s) {
+      if(c==arr.length) {
+         System.out.println(s);
+         return;
+      }
+      subsum(c+1,s+arr[c]);
+      subsum(c+1,s);
+   }
+}
