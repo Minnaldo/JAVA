@@ -18,11 +18,11 @@ public class 회문1_SWEA_D3_1215 {
 			}
 			
 			//가로
-			for(int i = 0; i <= 8-num; i++)
+			for(int i = 0; i <= 8; i++)
 			{
-				for(int j = 0; j <= 8-num; j++)
+				for(int j = 0; j <= 8; j++)
 				{
-
+					
 				}
 			}
 		}
