@@ -3,7 +3,7 @@ package AD;
 import java.util.Arrays;
 
 public class 조합 {
-
+	
 	static int[] arr = {1, 2, 3, 4};
 	static int[] brr = new int[2];
 	
@@ -15,7 +15,7 @@ public class 조합 {
 	{
 		if(c == brr.length)
 		{
-			System.out.println(brr);
+			System.out.println(Arrays.toString(brr));
 			return;
 		}
 		if(n == arr.length)
@@ -27,4 +27,5 @@ public class 조합 {
 		combination(n+1, c+1);
 		combination(n+1, c);
 	}
+	
 }

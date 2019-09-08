@@ -1,8 +1,0 @@
-package Product_HW_Java_08;
-
-public class ProductTest {
-	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-	}
-}
