@@ -1,4 +1,4 @@
-
+package AD;
 
 public class 순열조합_대들신 {
 	static int[] num = { 1, 2, 3 };
