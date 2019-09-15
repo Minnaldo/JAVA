@@ -1,0 +1,20 @@
+-웹서버란?
+-웹어플리케이션이란?
+-웹어플리케이션서버란?
+-웹브라우저란?
+
+=======================
+서블릿을 만드는 방법...
+1. HttpServlet 클래스를 상속받아서, 원하는 처리를 doGet, doPost를 재정의해서 구현한다.
+2. 서블릿을 웹어플리케이션에 등록하는 방법.
+  -방법1 : @WetServlet 에노테이션을 추가한다.
+  -방법2 : web.xml에 서블릿 클래스를 등록한다.
+
+
+Java Resources -> src -> java파일 생성
+-class에 extends HttpServlet 상속 추가
+-Source -> Override/Implement Methods -> doGet() 추가
+
+****서블릿과 JSP의 변천과정****   ***좀많이 중요***
+-웹어플리케이션에서 동적으로 응답을 만들어내는 주체
+

@@ -1,0 +1,16 @@
+*웹 표준과 HTML5의 특징과 추가 Tag
+  -video   (video.js)?!
+*block과 inline tag 차이점
+*자바스크립트 객체들 (window, BOM, DOM )
+*window 객체 함수들
+ -setInteval 등등 기본함수들
+*자바스크립트 기본 문법
+*CSS selector
+*화면구성을 위한 CSS (위치 설정 등)
+  -float 속성들과 같은 거  규칙들을 잘 아냐??
+*JQuery 이벤트 처리기법, selector
+*JQuery 데이터 처리
+
+-너무 깊이 들어가지 않는다고 핵심만
+
+-9월16일(월요일) 1교시 과목평가 :)
