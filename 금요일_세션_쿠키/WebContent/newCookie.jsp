@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%
+	for( Cookie cookie : request.getCookies() ) {
+		out.println(cookie.getName() + " " + cookie.getValue());
+		out.println(" <br> ");
+	}
+%>
 </body>
 </html>
